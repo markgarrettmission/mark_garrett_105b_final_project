@@ -1,0 +1,41 @@
+#Logo{
+    height: 100px;
+}
+#ani1{
+    position: absolute;
+    left: 20px;
+    top:20px;
+opacity: 0;
+    animation: logoAnimate 5s ease-in-out 1s 1 normal forwards;
+    
+    }
+    /* You could use separate properties instead of the shorthand
+        animation-name:logoAnimate;
+        animation-duration:5s;
+        animation-timing-function:ease;
+        animation-delay:2s;
+        animation-iteration-count:1;
+        animation-direction:normal;
+        animation-fill-mode:forwards;
+        animation-play-state:not used */
+/* @keyframes logoAnimate{
+    0% {left: 8px;top:8px;}
+    25% {left:calc(100% - 150px);top:8px;}
+    50% {left:calc(100% - 150px);top:calc(100% - 166px);}
+    75% {left:calc(50% - 75px);top:calc(30vh + 300px);}
+    100% {left: 8px;top:8px;}
+    } */
+
+    @keyframes logoAnimate{
+        0% {left: 20px;top:20px;opacity: 0;}
+        /* 20% {left:calc(100% - 200px);top:20px;} */
+        25% {left:calc(100% - 200px);top:20px;opacity: 1;}
+        /* 45%{transform: scale(2);} */
+        /* 50%{transform: scale(2);} */
+        50% {left:calc(100% - 200px);top:calc(100vh - 150px);transform: scale(1);opacity: 1;}
+        70% {left:calc(50% - 50px);top:calc(50vh - 50px);transform: scale(1);opacity: 1;}
+        80% {left:calc(50% - 50px);top:calc(50vh - 50px);transform: scale(3);opacity: 1;}
+        90% {left:calc(50% - 50px);top:calc(50vh - 50px);transform: scale(1);opacity: 1;}
+        95% {left: 20px;top:20px;transform: scale(4);opacity: 0;}
+        100% {left: -100px;top:-100px;transform: scale(1);opacity: 0;}
+        }

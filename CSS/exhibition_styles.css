@@ -1,0 +1,57 @@
+
+#image1{
+    grid-area:image1;
+    background: url(../images/background4.jpg) no-repeat 130% 30%;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+#asArtist{
+    grid-area:asArtist;
+    
+}
+
+#publications{
+    grid-area:publications;
+}
+
+#asCurator{
+    grid-area:asCurator;
+}
+
+#image2{
+    grid-area:image2;
+    background: url(../images/background2.jpg) no-repeat top left;
+    background-size:cover;
+}
+
+  #content1 div{
+        padding: 1rem; 
+        outline:1px solid rgba(0, 0, 0, 0..5);
+    border-radius: .5rem;
+    margin:.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (min-width:768px){
+
+        #content1{
+        display:grid;
+        grid-template-rows: 30px repeat(5, minmax(75px, 1fr));
+        grid-template-rows:auto auto 1fr;
+        grid-template-areas:
+        "image1 asArtist asArtist asArtist publications publications"
+        "image1 asArtist asArtist asArtist asCurator asCurator"
+        "image1 asArtist asArtist asArtist image2 image2";
+    }
+    }
+@media screen and (min-width:1200px){
+  
+    #content1{
+        grid-template-rows:auto 1fr; 
+        grid-template-columns:repeat(6, minmax(75px, 1fr));
+        grid-template-areas:
+        "image1 asArtist asArtist asArtist publications asCurator"
+        "image1 asArtist asArtist asArtist image2 image2";
+    }
+}
